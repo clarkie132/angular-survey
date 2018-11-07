@@ -1,0 +1,27 @@
+<div class="container">
+<h1>Find your house</h1>
+  <p class="lead">Type in your postcode, let's see if we have any information for you!</p>
+  <form>
+    <div class="form-row align-items-center">
+      <div class="col-auto">
+        <label class="sr-only" for="inlineFormInputGroup">Username</label>
+        <div class="input-group mb-2">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <i class="fa fa-home"></i>
+            </div>
+          </div>
+          <input name="postcode" [(ngModel)]="postcode" type="text" class="form-control" id="inlineFormInputGroup"
+            placeholder="Postcode">
+        </div>
+      </div>
+      <div class="col-auto">
+        <button type="submit" (click)="search()" class="btn btn-primary mb-2">Submit</button>
+      </div>
+    </div>
+  </form>
+<app-results *ngIf="addresses" [addresses]="addresses"></app-results>
+</div>
+
+
+

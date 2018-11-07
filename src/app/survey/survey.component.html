@@ -1,0 +1,7 @@
+<div class="card-header">
+  {{survey.type}}
+</div>
+<div class="card-body">
+  <p class="card-text">{{survey.description}}</p>
+  <a *ngIf="survey.link" href="{{survey.link}}" target="_blank" class="btn btn-primary">Download</a>
+</div>

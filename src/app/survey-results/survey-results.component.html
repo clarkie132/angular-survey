@@ -1,0 +1,6 @@
+<div class="container">
+  <h1>{{surveys.length}} survey{{surveys.length > 1 ? 's' : ''}} found for {{address.line1}} {{address.city}} {{address.postcode}}</h1>
+  <div *ngFor="let survey of surveys" class="col">
+    <app-survey [survey]="survey"></app-survey>
+  </div>
+</div>
